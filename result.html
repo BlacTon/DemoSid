@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+</head>
+<body>
+
+    <h1>Form Results</h1>
+
+    <!-- Your form -->
+    <form id="http://127.0.0.1:5500/Test_.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="Address">Address: </label>
+        <input type="address" id="address" name="address">
+
+        <input type="button" value="Submit" onclick="displayResults()">
+    </form>
+
+    <!-- Display results container -->
+    <div id="results"></div>
+
+    <script>
+        function displayResults() {
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            // Display results
+            var resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = "<p><strong>Name:</strong> " + name + "</p>" +
+                                          "<p><strong>Address: </strong> " + address + "</p>";
+        }
+    </script>
+
+</body>
+</html>
